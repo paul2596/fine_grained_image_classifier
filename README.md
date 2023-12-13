@@ -11,6 +11,7 @@ The images were resized to 299x299 to match the input layer of Xception architec
 ## Modelling: 
 
 Different models were considered for the fine-grained task initially InceptionV3 and Bilinear-CNN using 2 VGG16 were tried out but I could not effectively reduce the overfitting. Further, Xception model which uses depthwise separable convolution layers which has lesser parameters to compute and is less prone to overfitting. The base model used was a Xception model initialized with pretrained weights from ImageNet followed by a Fully connected layer that consists of a dense layer of 1024 units with relu activation, a dropout layer was used to reduce overfitting and connected to an output layer with a size of 200. An SGD optimizer was used to progress towards minimal loss. 
+
 ![image](https://github.com/paul2596/fine_grained_image_classifier/assets/71576923/d29bd242-0552-47b3-ad0a-fe88db8870cc)
 
 ## Training and Hyperparameter Tuning: 
